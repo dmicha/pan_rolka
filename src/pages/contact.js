@@ -35,7 +35,7 @@ const ContactPage = () => (
         <Formik
             initialValues={{ name: '', email: '', message: '' }}
             onSubmit={(values, { setSubmitting }) => {
-                axios.post('https://us-central1-gatsby-warsztaty.cloudfunctions.net/sendEmail', values)
+                axios.post('http://localhost:5001/pan-rolka-276714/us-central1/sendEmail', values)
                 .then((res) => {
                     console.log(res);
                     setSubmitting(false);
