@@ -58,7 +58,7 @@ const Navigation = () => {
         <Link to="/about">o nas</Link>
       </NavigationListItem>
       <NavigationListItem>
-        <Link to="/articles">artykuły</Link>
+        <Link to="/offer">oferta</Link>
       </NavigationListItem>
       <NavigationListItem>
         <Link to="/gallery">galeria</Link>

@@ -25,8 +25,8 @@ const StyledLabel = styled.label`
 `;
 
 const pageData = {
-    title: 'Napisz do nas!',
-    paragraph: `text`,
+    title: 'Kontakt',
+    paragraph: `Odpowiemy na wszyskie wasze pytania.`,
 };
 
 const ContactPage = () => (
@@ -54,7 +54,7 @@ const ContactPage = () => (
                 isSubmitting
             }) => (
                     <form onSubmit={handleSubmit}>
-                        <StyledLabel htmlFor="name">Name</StyledLabel>
+                        <StyledLabel htmlFor="name">Imię</StyledLabel>
                         <StyledInput 
                             id="name"
                             type="text"
@@ -72,7 +72,7 @@ const ContactPage = () => (
                             onBlur={handleBlur}
                             value={values.email} 
                         />
-                        <StyledLabel>Message</StyledLabel>
+                        <StyledLabel>Wiadomość</StyledLabel>
                         <StyledInput 
                             as="textarea" 
                             type="text" 
@@ -82,7 +82,7 @@ const ContactPage = () => (
                             onBlur={handleBlur}
                             value={values.message} 
                         />
-                        <Button disabled={isSubmitting}>send message</Button>
+                        <Button disabled={isSubmitting}>wyślij wiadomość</Button>
                     </form>
                 )}
         </Formik>
