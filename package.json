@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@sendgrid/mail": "^7.3.0",
     "axios": "^0.21.0",
     "babel-plugin-styled-components": "^1.11.1",
     "formik": "^2.2.1",
