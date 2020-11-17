@@ -16,7 +16,7 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: `Raleway`,
+              family: `Lato`,
               variants: [`400`, `600`, `700`],
             },
             {
@@ -28,21 +28,6 @@ module.exports = {
      
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Raleway`,
-    //         variants: [`400`, `600`, `700`],
-    //       },
-    //       {
-    //         family: `Montserrat`,
-    //         variants: [`400`, `600`, `700`],
-    //       },
-    //     ],
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
