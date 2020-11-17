@@ -10,22 +10,39 @@ module.exports = {
     `gatsby-plugin-layout`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-   
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Raleway`,
-            variants: [`400`, `600`, `700`],
-          },
-          {
-            family: `Montserrat`,
-            variants: [`400`, `600`, `700`],
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `Raleway`,
+              variants: [`400`, `600`, `700`],
+            },
+            {
+              family: `Montserrat`,
+              variants: [`400`, `600`, `700`],
+            },
+          ],
+        },
+     
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Raleway`,
+    //         variants: [`400`, `600`, `700`],
+    //       },
+    //       {
+    //         family: `Montserrat`,
+    //         variants: [`400`, `600`, `700`],
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
