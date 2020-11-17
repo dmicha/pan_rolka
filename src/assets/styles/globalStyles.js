@@ -14,6 +14,9 @@ body{
     margin-top:120px;
     padding:80px 85px 0;
     font-family:'Raleway';
+    @media only screen and (max-width: 800px){
+    padding:10px 10px 0;
+  }
 }
 
 button {

@@ -12,6 +12,10 @@ const Button = styled.button`
     text-decoration: none;
     color: inherit;
   }
+  @media only screen and (max-width: 800px){
+    flex-shrink: auto;
+  }
+    
 `;
 
 export default Button;
