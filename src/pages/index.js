@@ -1,8 +1,8 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import styled from 'styled-components';
-import Image from 'gatsby-image';
-import Button from '../components/Button/Button';
+import React from "react"
+import { graphql, Link } from "gatsby"
+import styled from "styled-components"
+import Image from "gatsby-image"
+import Button from "../components/Button/Button"
 
 const ContentWrapper = styled.div`
   width: 60%;
@@ -12,7 +12,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  @media only screen and (max-width: 800px){
+  @media only screen and (max-width: 800px) {
     height: 100vh;
     width: 100%;
   }
@@ -20,25 +20,25 @@ const ContentWrapper = styled.div`
     font-size: 105px;
     margin: 0;
     width: 60%;
-    line-height: 1.0;
-    @media only screen and (max-width: 800px){
-    font-size:50px;
-    text-align:right;
-    width: 100%;
-  }
+    line-height: 1;
+    @media only screen and (max-width: 800px) {
+      font-size: 50px;
+      text-align: right;
+      width: 100%;
+    }
   }
 
   p {
     margin: 60px 0 40px;
     width: 40%;
-    @media only screen and (max-width: 800px){
-    font-size:25px;
-    text-align:right;
-    width: 100%;
-    margin-right: 0px;
+    @media only screen and (max-width: 800px) {
+      font-size: 25px;
+      text-align: right;
+      width: 100%;
+      margin-right: 0px;
+    }
   }
-  }
-`;
+`
 
 const ImageWrapper = styled(Image)`
   position: absolute !important;
@@ -47,10 +47,10 @@ const ImageWrapper = styled(Image)`
   width: 40%;
   height: 100vh;
   object-fit: cover;
-  @media only screen and (max-width: 800px){
-    display:none;
+  @media only screen and (max-width: 800px) {
+    display: none;
   }
-`;
+`
 
 const IndexPage = ({ data }) => (
   <>
@@ -61,12 +61,14 @@ const IndexPage = ({ data }) => (
         <br />
         Łódź, Piłsudskiego 25
       </p>
-     <Button><Link to="/about">Dowiedz się więcej!</Link></Button>
+      <Button>
+        <Link to="/about">Dowiedz się więcej!</Link>
+      </Button>
     </ContentWrapper>
     {console.log(data)}
     <ImageWrapper fluid={data.file.childImageSharp.fluid} />
   </>
-);
+)
 
 export const query = graphql`
   {
@@ -78,6 +80,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
 export default IndexPage

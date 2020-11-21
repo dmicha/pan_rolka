@@ -9,7 +9,7 @@ const NavigationWrapper = styled.nav`
   top: 0px;
   left: 30px;
   justify-content: flex-start;
-  font-family: "Raleway";
+  font-family: "Lato";
   @media only screen and (max-width: 800px) {
     flex-wrap: wrap;
     justify-content: center;

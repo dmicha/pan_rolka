@@ -21,7 +21,7 @@ const StyledLabel = styled.label`
   display: block;
   font-size: 14px;
   font-weight: bold;
-  font-family: Montserrat;
+  font-family: Lato;
 `
 
 const pageData = {

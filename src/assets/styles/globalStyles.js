@@ -1,6 +1,6 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 
-const GlobalStyle = createGlobalStyle `
+const GlobalStyle = createGlobalStyle`
 html{
     box-sizing:border-box;
 }
@@ -12,8 +12,10 @@ html{
 
 body{
     margin-top:120px;
+    max-height: 100vh;
+    flex-direction: column;
     padding:80px 85px 0;
-    font-family:'Raleway';
+    font-family:'Lato';
     @media only screen and (max-width: 800px){
     padding:10px 10px 0;
   }
@@ -22,12 +24,12 @@ body{
 button {
     padding:0;
     cursor:pointer;
-    font-family:'Raleway';
+    font-family:'Lato';
     }
     ul{
         padding:0;
         margin:0;
     }
-    `;
+    `
 
-    export default  GlobalStyle;
+export default GlobalStyle
