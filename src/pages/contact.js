@@ -33,12 +33,7 @@ const pageData = {
 const ContactPage = () => (
   <>
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
-    <form
-      name="contact"
-      method="POST"
-      data-netlify-recaptcha="true"
-      data-netlify="true"
-    >
+    <form name="contact" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="Contact Form" />
       <StyledLabel>Imię</StyledLabel>
       <StyledInput input type="text" name="name"></StyledInput>
@@ -46,7 +41,7 @@ const ContactPage = () => (
       <StyledInput input type="email" name="email"></StyledInput>
       <StyledLabel>Wiadomość</StyledLabel>
       <StyledInput as="textarea" type="text" name="message"></StyledInput>
-      <ReCAPTCHA sitekey="{process.env.reCAPTCHA}" />
+
       <Button type="submit">wyślij wiadomość</Button>
     </form>
   </>
