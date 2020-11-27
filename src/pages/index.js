@@ -65,7 +65,6 @@ const IndexPage = ({ data }) => (
         <Link to="/about">Dowiedz się więcej!</Link>
       </Button>
     </ContentWrapper>
-    {console.log(data)}
     <ImageWrapper fluid={data.file.childImageSharp.fluid} />
   </>
 )

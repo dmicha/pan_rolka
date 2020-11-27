@@ -21,69 +21,32 @@ const StyledLabel = styled.label`
   display: block;
   font-size: 14px;
   font-weight: bold;
-  font-family: Lato;
+  font-family: Montserrat;
 `
 
 const pageData = {
   title: "Kontakt",
-  paragraph: `Odpowiemy na wszyskie wasze pytania.`,
+  paragraph: `Zapraszamy do zadawania pytań. Napewno odpowiemy.`,
 }
 
 const ContactPage = () => (
   <>
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
-    <Formik
-      initialValues={{ name: "", email: "", message: "" }}
-      onSubmit={(values, { setSubmitting }) => {
-        axios
-          .post(
-            "http://localhost:5001/pan-rolka-276714/us-central1/sendEmail",
-            values
-          )
-          .then(res => {
-            console.log(res)
-            setSubmitting(false)
-          })
-          .catch(err => {
-            console.log(err)
-            setSubmitting(false)
-          })
-      }}
+    <form
+      name="contact"
+      action="POST"
+      data-netlify-recaptcha="true"
+      data-netlify="true"
     >
-      {({ values, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
-        <form onSubmit={handleSubmit}>
-          <StyledLabel htmlFor="name">Imię</StyledLabel>
-          <StyledInput
-            id="name"
-            type="text"
-            name="name"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.name}
-          />
-          <StyledLabel htmlFor="e-mail">E-mail</StyledLabel>
-          <StyledInput
-            id="email"
-            type="e-mail"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-          />
-          <StyledLabel>Wiadomość</StyledLabel>
-          <StyledInput
-            as="textarea"
-            type="text"
-            name="message"
-            id="message"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.message}
-          />
-          <Button disabled={isSubmitting}>wyślij wiadomość</Button>
-        </form>
-      )}
-    </Formik>
+      <StyledLabel>Imię</StyledLabel>
+      <StyledInput input type="text" name="name"></StyledInput>
+      <StyledLabel>Email</StyledLabel>
+      <StyledInput input type="email" name="email"></StyledInput>
+      <StyledLabel>Wiadomość</StyledLabel>
+      <StyledInput as="textarea" type="text" name="message"></StyledInput>
+      <div data-netlify-recaptcha="true"></div>
+      <Button type="submit">wyślij wiadomość</Button>
+    </form>
   </>
 )
 

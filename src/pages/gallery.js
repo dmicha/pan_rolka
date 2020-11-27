@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 //import { graphql } from "gatsby"
 //import Image from "gatsby-image"
-// import PageInfo from "../components/PageInfo/PageInfo"
+import PageInfo from "../components/PageInfo/PageInfo"
 
 const TittleGalleryPage = styled.div`
   position: absolute !important;
@@ -15,16 +15,13 @@ const TittleGalleryPage = styled.div`
 `
 const pageData = {
   title: "Galeria",
-  paragraph: `Tutaj jest miejsce na zdięcia`,
+  paragraph: `W galerii naszych deserów nabierzecie smaka by do nas przyjechać lub zamówić online`,
 }
 
 const GalleryPage = () => (
   <>
-    <h1>galeria
-    </h1>
+    <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
   </>
 )
-
-
 
 export default GalleryPage
