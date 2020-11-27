@@ -38,6 +38,7 @@ const ContactPage = () => (
       data-netlify-recaptcha="true"
       data-netlify="true"
     >
+      <input type="hidden" name="form-name" value="Contact Form" />
       <StyledLabel>Imię</StyledLabel>
       <StyledInput input type="text" name="name"></StyledInput>
       <StyledLabel>Email</StyledLabel>
