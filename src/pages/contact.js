@@ -34,8 +34,8 @@ const ContactPage = () => (
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
     <form
       name="contact"
-      action="POST"
-      netlify-honeypot="bot-field"
+      method="POST"
+      data-netlify-recaptcha="true"
       data-netlify="true"
     >
       <StyledLabel>Imię</StyledLabel>
@@ -44,9 +44,7 @@ const ContactPage = () => (
       <StyledInput input type="email" name="email"></StyledInput>
       <StyledLabel>Wiadomość</StyledLabel>
       <StyledInput as="textarea" type="text" name="message"></StyledInput>
-      <p class="hidden">
-    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-  </p>
+      <div data-netlify-recaptcha="true"></div>
       <Button type="submit">wyślij wiadomość</Button>
     </form>
   </>
