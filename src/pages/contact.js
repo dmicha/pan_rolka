@@ -4,6 +4,7 @@ import { Formik } from "formik"
 import axios from "axios"
 import PageInfo from "../components/PageInfo/PageInfo"
 import Button from "../components/Button/Button"
+import ReCAPTCHA from "react-google-recaptcha"
 
 const StyledInput = styled.input`
   display: block;
@@ -45,7 +46,7 @@ const ContactPage = () => (
       <StyledInput input type="email" name="email"></StyledInput>
       <StyledLabel>Wiadomość</StyledLabel>
       <StyledInput as="textarea" type="text" name="message"></StyledInput>
-      <div data-netlify-recaptcha="true"></div>
+      <ReCAPTCHA sitekey="{process.env.reCAPTCHA}" />
       <Button type="submit">wyślij wiadomość</Button>
     </form>
   </>
