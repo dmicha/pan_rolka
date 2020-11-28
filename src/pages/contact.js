@@ -34,16 +34,24 @@ const ContactPage = () => (
   <>
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
 
-    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-    <StyledInput name="name" placeholder="imię" type="text"/>
-      
+    <form
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <p class="hidden">
+        <input name="bot-field" />
+      </p>
+      <StyledInput name="name" placeholder="imię" type="text" />
+
       {/* <StyledLabel>Imię</StyledLabel>
       <StyledInput input type="text" name="name"></StyledInput>
       <StyledLabel>Email</StyledLabel>
       <StyledInput input type="email" name="email"></StyledInput>
       <StyledLabel>Wiadomość</StyledLabel>
       <StyledInput as="textarea" type="text" name="message"></StyledInput> */}
-
+      <br></br>
       <Button type="submit">wyślij wiadomość</Button>
     </form>
   </>
