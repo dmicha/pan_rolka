@@ -35,7 +35,7 @@ const ContactPage = () => (
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
 
     <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-    <input name="name" placeholder="imię" type="text"/>
+    <StyledInput name="name" placeholder="imię" type="text"/>
       
       {/* <StyledLabel>Imię</StyledLabel>
       <StyledInput input type="text" name="name"></StyledInput>
