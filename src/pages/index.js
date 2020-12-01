@@ -3,6 +3,22 @@ import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import Button from "../components/Button/Button"
+import { Helmet } from "react-helmet"
+class Application extends React.Component {
+  render() {
+    return (
+      <div className="application">
+        <Helmet>
+          <meta charset="utf-8" />
+          <title>Pan Rolka</title>
+          <meta name="description" content="Ice cream landing page" />
+          <meta name="author" content="Damian Michalak" />
+          <link rel="shortcut icon" href="logo.ico" type=".src/assets/logo.ico"></link>
+        </Helmet>
+      </div>
+    )
+  }
+}
 
 const ContentWrapper = styled.div`
   width: 60%;
