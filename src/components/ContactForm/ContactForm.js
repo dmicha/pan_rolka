@@ -1,7 +1,3 @@
-// Adapted from:
-// https://github.com/sw-yx/gatsby-netlify-form-example-v2/blob/master/src/pages/contact.js
-// https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
-
 // This is what we'll use to navigate to the custom success page
 // More on this here: https://www.gatsbyjs.org/docs/gatsby-link/#how-to-use-the-navigate-helper-function
 import { navigate } from "gatsby"
@@ -26,52 +22,81 @@ const StyledInput = styled.input`
   width: ${({ as }) => (as ? "500px" : "300px")};
   margin-bottom: ${({ as }) => as && "40px"};
 `
-
-// This function encodes the captured form data in the format that Netlify's backend requires
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
-
 const ContactForm = props => {
-  const [name, setName] = useState("")
+  const [state, setState] = React.useState({})
 
   const handleChange = e => {
-    setName({ ...name, [e.target.name]: e.target.value })
+    setState({ ...state, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = event => {
-    // Prevent the default onSubmit behavior
-    event.preventDefault()
-    // POST the encoded form with the content-type header that's required for a text submission
-    // Note that the header will be different for POSTing a file
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": event.target.getAttribute("name"),
-        ...name,
+        "form-name": form.getAttribute("name"),
+        ...state,
       }),
     })
-      // On success, redirect to the custom success page using Gatsby's `navigate` helper function
-      .then(() => navigate("/"))
-      // On error, show the error in an alert
+      .then(() => navigate(form.getAttribute("action")))
+
       .catch(error => alert(error))
   }
-
+  console.log(state)
   return (
     <form
-      data-netlify="true"
-      action="/"
-      name="contact-form"
+      name="contact"
       method="post"
+      action="/"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="contact-form" />
-      <StyledLabel>Imię</StyledLabel>{" "}
-      <StyledInput name="firstName" type="text" onChange={handleChange} />
-      <Button type="submit" >Wyślij wiadomość</Button>
+      {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+      <input type="hidden" name="form-name" value="contact" />
+      <p hidden>
+        <label>
+          Don’t fill this out:{" "}
+          <input name="bot-field" onChange={handleChange} />
+        </label>
+      </p>
+      <p>
+        <StyledLabel>
+          Imię
+          <br />
+          <StyledInput type="text" name="name" onChange={handleChange} />
+        </StyledLabel>
+      </p>
+      <p>
+        <StyledLabel>
+          Adres e-mail
+          <br />
+          <StyledInput type="email" name="email" onChange={handleChange} />
+        </StyledLabel>
+      </p>
+      <p>
+        <StyledLabel>
+          Wiadomość
+          <br />
+          <StyledInput
+            type="text"
+            as="textarea"
+            rows="7"
+            name="message"
+            onChange={handleChange}
+          />
+        </StyledLabel>
+      </p>
+      <p>
+        <Button type="submit">Wyślij wiadomość</Button>
+      </p>
     </form>
   )
 }
