@@ -49,12 +49,11 @@ const ContactForm = props => {
 
       .catch(error => alert(error))
   }
-  console.log(state)
   return (
     <form
       name="contact"
       method="post"
-      action="/"
+      action="/thanks"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
