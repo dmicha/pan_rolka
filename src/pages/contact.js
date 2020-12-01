@@ -5,7 +5,7 @@ import axios from "axios"
 import PageInfo from "../components/PageInfo/PageInfo"
 import Button from "../components/Button/Button"
 import ReCAPTCHA from "react-google-recaptcha"
-import style from "./contact.module.css"
+import ContactForm from "../components/ContactForm/ContactForm"
 // const StyledInput = styled.input`
 //   display: block;
 //   border: 2px solid black;
@@ -17,13 +17,6 @@ import style from "./contact.module.css"
 //   margin-bottom: ${({ as }) => as && "40px"};
 // `
 
-// const StyledLabel = styled.label`
-//   margin: 30px 0 10px;
-//   display: block;
-//   font-size: 14px;
-//   font-weight: bold;
-//   font-family: Montserrat;
-// `
 
 const pageData = {
   title: "Kontakt",
@@ -34,32 +27,8 @@ const ContactPage = () => (
   <>
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
 
-    <form
-      name="contact"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
-      <p className="hidden" >
-        <input name="bot-field"/>
-      </p>
-      <label className={style.styledLabel}>Imię</label>
-      <input
-        className={style.styledImput}
-        name="name"
-        placeholder="imię"
-        type="text"
-      />
-
-      {/* 
-      <StyledInput input type="text" name="name"></StyledInput>
-      <StyledLabel>Email</StyledLabel>
-      <StyledInput input type="email" name="email"></StyledInput>
-      <StyledLabel>Wiadomość</StyledLabel>
-      <StyledInput as="textarea" type="text" name="message"></StyledInput> */}
-      <br></br>
-      <Button type="submit">wyślij wiadomość</Button>
-    </form>
+    <ContactForm />
+   
   </>
 )
 
