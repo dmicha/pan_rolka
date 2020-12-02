@@ -49,6 +49,7 @@ const ContactForm = props => {
 
       .catch(error => alert(error))
   }
+
   return (
     <form
       name="contact"
@@ -58,10 +59,9 @@ const ContactForm = props => {
       data-netlify-recaptcha="true"
       onSubmit={handleSubmit}
     >
-      {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+      
       <input type="hidden" name="form-name" value="contact" />
-      88e288
-      <pamp/amp/</form>$e2iczMfab[2]
+     <p>
         <StyledLabel>
           Imię
           <br />
