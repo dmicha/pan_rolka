@@ -14,6 +14,7 @@ const NavigationWrapper = styled.nav`
     flex-wrap: wrap;
     justify-content: center;
     left: 10px;
+    top: 10px;
   }
   a {
     text-decoration: none;
