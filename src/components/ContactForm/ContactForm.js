@@ -21,7 +21,6 @@ const StyledInput = styled.input`
   height: ${({ as }) => (as ? "200px" : "auto")};
   width: ${({ as }) => (as ? "500px" : "300px")};
   margin-bottom: ${({ as }) => as && "40px"};
-  
 `
 function encode(data) {
   return Object.keys(data)
@@ -62,7 +61,7 @@ const ContactForm = props => {
       method="post"
       action="/thanks"
       data-netlify="true"
-      data-netlify-recaptcha="true"
+      netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
@@ -107,13 +106,8 @@ const ContactForm = props => {
           />
         </StyledLabel>
       </p>
-      <div data-netlify-recaptcha="true"></div>
       <p>
-        <Button
-          type="submit"
-        >
-          Wyślij wiadomość
-        </Button>
+        <Button type="submit">Wyślij wiadomość</Button>
       </p>
     </form>
   )
