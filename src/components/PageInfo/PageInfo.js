@@ -14,6 +14,9 @@ const Wrapper = styled.div`
     font-size: 18px;
     margin: 15px 0 0;
   }
+  @media only screen and (max-width: 800px) {
+    margin: 150px 0 15px 20px;
+  }
 `;
 
 const PageInfo = ({ title, paragraph }) => (

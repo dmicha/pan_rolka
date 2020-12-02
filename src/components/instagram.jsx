@@ -14,7 +14,7 @@ const Instagram = () => {
         const date = new Date(post.timestamp * 1000).toLocaleDateString(`de-DE`)
 
         return (
-          <a key={post.id} className="instagram-link-styles" href={`https://www.instagram.com/p/${post.id}/`}>
+          <a key={post.id} className="instagram-link-styles" href={`https://www.instagram.com/p/${post.id}/`} target="_blank">
             <div className="instagram-overlay" />
             <Img fluid={post.localFile.childImageSharp.fluid} />
             <div className="instagram-content">

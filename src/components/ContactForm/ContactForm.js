@@ -80,7 +80,7 @@ const ContactForm = props => {
       </p>
       <p>
         <StyledLabel>
-          Adres e-maila
+          Adres e-mail
           <br />
           <StyledInput
             type="email"

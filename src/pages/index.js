@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import Button from "../components/Button/Button"
+import PageInfo from "../components/PageInfo/PageInfo"
 
 
 const ContentWrapper = styled.div`
@@ -52,9 +53,14 @@ const ImageWrapper = styled(Image)`
     display: none;
   }
 `
-
+const pageData = {
+  title: "Uwaga!",
+  paragraph: "Od 6 grudnia jesteśmy zamknięci",
+}
 const IndexPage = ({ data }) => (
   <>
+
+    <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
     <ContentWrapper>
       <h1>Zrolujemy Ci lody!</h1>
       <p>
