@@ -55,7 +55,7 @@ const ImageWrapper = styled(Image)`
 `
 const pageData = {
   title: "Uwaga!",
-  paragraph: "Od 6 grudnia jesteśmy zamknięci",
+  paragraph: "Od 6 grudnia jesteśmy zamknięci.",
 }
 const IndexPage = ({ data }) => (
   <>
