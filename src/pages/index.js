@@ -17,7 +17,7 @@ const ContentWrapper = styled.div`
     height: 50vh;
     width: 100%;
   }
-  @media only screen and (max-height: 500px) {
+  @media only screen and (max-height: 450px) {
     margin-top: 50px;
   }
 
