@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Instagram from "../components/instagram"
 //import { graphql } from "gatsby"
 //import Image from "gatsby-image"
 import PageInfo from "../components/PageInfo/PageInfo"
@@ -21,6 +22,7 @@ const pageData = {
 const GalleryPage = () => (
   <>
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
+    <Instagram></Instagram>
   </>
 )
 
