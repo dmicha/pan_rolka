@@ -38,8 +38,8 @@ const Thanks = ({ data }) => (
   <>
     <ContentWrapper>
       <h1>Dzięki za wiadomość!</h1>
-      <p>Cieszymy się że, zainteresowałeś się naszą ofertą!🥰 <br></br>
-      Spodziewaj się odpowiedzi w swojej skrzynce odbiorczej już niedługo!📧</p>
+      <p>Cieszymy się że, zainteresowałeś się naszą ofertą! <br></br>
+      Spodziewaj się odpowiedzi w swojej skrzynce odbiorczej już niedługo!</p>
     </ContentWrapper>
     <ImageWrapper fluid={data.file.childImageSharp.fluid} />
   </>

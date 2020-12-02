@@ -5,14 +5,14 @@ const useInstagram = () => {
     {
       instagram: allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 30) {
         nodes {
-          caption
+          
           id
           timestamp
           likes
           localFile {
             childImageSharp {
               fluid(quality: 100, maxWidth: 600, maxHeight: 600) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }

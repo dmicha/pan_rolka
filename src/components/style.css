@@ -73,11 +73,11 @@
 }
 
 .instagram-link-styles:hover .instagram-overlay {
-  opacity: 1;
+  opacity: .5;
 }
 
 .instagram-link-styles:focus .instagram-overlay {
-  opacity: 1;
+  opacity: .5;
   box-shadow: inset 0 0 0 7px white;
 }
 

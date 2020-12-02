@@ -38,23 +38,23 @@ const AboutPage = ({ data }) => (
   <>
     <ContentWrapper>
       <h1>O nas!</h1>
-      <p>Witajcie Lodożercy! 🖖🏼<br></br>
-Już niebawem w naszym mieście🛶
-Gdzie jednorożec stoi na straży🦄
-A ludziom się wyjść z domu marzy🏡
-Pragniemy powiadomić o pewnej nowinie🎉
-Która Was wszystkich zaskoczy mile🙀
+      <p>Witajcie Lodożercy! <br></br>
+Już niebawem w naszym mieście
+Gdzie jednorożec stoi na straży
+A ludziom się wyjść z domu marzy
+Pragniemy powiadomić o pewnej nowinie
+Która Was wszystkich zaskoczy mile
 Otóż otworzy się lokal, nieduży
-Lecz bardzo przytulny💕
-Gdzie lody będziemy serwować🍦
-A uśmiech na Waszych twarzach malować🥰
-Zakręcimy dla Was rolki lodowe 🍥
-Co ze świeżych owoców są robione🍓🍊🍌
-Uwierzcie nam na słowo będzie pysznie i kolorowo🍭
-Wiec Kochani serdecznie Was zapraszamy😃
-A datę otwarcia niedługo podamy⏰
+Lecz bardzo przytulny
+Gdzie lody będziemy serwować
+A uśmiech na Waszych twarzach malować
+Zakręcimy dla Was rolki lodowe 
+Co ze świeżych owoców są robione
+Uwierzcie nam na słowo będzie pysznie i kolorowo
+Wiec Kochani serdecznie Was zapraszamy
+A datę otwarcia niedługo podamy
 Pozdrawiamy,
-- Pan Rolka🍥</p>
+- Pan Rolka</p>
     </ContentWrapper>
     <ImageWrapper fluid={data.file.childImageSharp.fluid} />
   </>
