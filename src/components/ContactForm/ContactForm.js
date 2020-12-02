@@ -21,6 +21,10 @@ const StyledInput = styled.input`
   height: ${({ as }) => (as ? "200px" : "auto")};
   width: ${({ as }) => (as ? "500px" : "300px")};
   margin-bottom: ${({ as }) => as && "40px"};
+
+  @media only screen and (max-width: 800px) {
+    width: ${({ as }) => (as ? "340px" : "300px")};;
+  }
 `
 function encode(data) {
   return Object.keys(data)
