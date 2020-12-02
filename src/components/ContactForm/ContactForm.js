@@ -31,7 +31,12 @@ const ContactForm = props => {
   const [state, setState] = React.useState({})
 
   const handleChange = e => {
-    setState({ ...state, [e.target.name]: e.target.value })
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+      [e.target.email]: e.target.value,
+      [e.target.message]: e.target.value,
+    })
   }
 
   const handleSubmit = e => {
@@ -59,9 +64,8 @@ const ContactForm = props => {
       data-netlify-recaptcha="true"
       onSubmit={handleSubmit}
     >
-      
       <input type="hidden" name="form-name" value="contact" />
-     <p>
+      <p>
         <StyledLabel>
           Imię
           <br />
@@ -90,7 +94,16 @@ const ContactForm = props => {
       </p>
       <div data-netlify-recaptcha="true"></div>
       <p>
-        <Button type="submit">Wyślij wiadomość</Button>
+        <Button
+          disabled={
+            state.name.length < 1 &&
+            state.email.length < 1 &&
+            state.message.length < 1
+          }
+          type="submit"
+        >
+          Wyślij wiadomość
+        </Button>
       </p>
     </form>
   )
