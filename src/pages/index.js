@@ -5,7 +5,6 @@ import Image from "gatsby-image"
 import Button from "../components/Button/Button"
 import PageInfo from "../components/PageInfo/PageInfo"
 
-
 const ContentWrapper = styled.div`
   width: 60%;
   height: calc(100vh - 300px);
@@ -18,6 +17,10 @@ const ContentWrapper = styled.div`
     height: 50vh;
     width: 100%;
   }
+  @media only screen and (max-height: 500px) {
+    margin-top: 50px;
+  }
+
   h1 {
     font-size: 105px;
     margin: 0;
@@ -59,7 +62,6 @@ const pageData = {
 }
 const IndexPage = ({ data }) => (
   <>
-
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
     <ContentWrapper>
       <h1>Zrolujemy Ci lody!</h1>

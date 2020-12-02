@@ -6,7 +6,7 @@ import Image from "gatsby-image"
 const NavigationWrapper = styled.nav`
   position: absolute;
   display: flex;
-  top: 0px;
+  top: 10px;
   left: 30px;
   justify-content: flex-start;
   font-family: "Montserrat";
