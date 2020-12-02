@@ -14,7 +14,6 @@ const NavigationWrapper = styled.nav`
     flex-wrap: wrap;
     justify-content: center;
     left: 10px;
-    top: 10px;
   }
   a {
     text-decoration: none;
@@ -26,6 +25,9 @@ const NavigationList = styled.ul`
   list-style: none;
   display: flex;
   padding-top: 30px;
+  @media only screen and (max-width: 800px) {
+    top: 10px;
+  }
 `
 const NavigationListItem = styled.li`
   font-weight: 600;
