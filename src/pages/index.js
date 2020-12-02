@@ -15,7 +15,7 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: flex-end;
   @media only screen and (max-width: 800px) {
-    height: 100vh;
+    height: 50vh;
     width: 100%;
   }
   h1 {

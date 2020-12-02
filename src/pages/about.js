@@ -1,7 +1,9 @@
 import React from "react"
-import { graphql,} from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
+import Button from "../components/Button/Button"
+import PageInfo from "../components/PageInfo/PageInfo"
 
 const ContentWrapper = styled.div`
   width: 60%;
@@ -14,6 +16,7 @@ const ContentWrapper = styled.div`
   @media only screen and (max-width: 800px) {
     height: 100vh;
     width: 100%;
+    margin-top: 250px;
   }
   h1 {
     font-size: 105px;
@@ -50,33 +53,22 @@ const ImageWrapper = styled(Image)`
     display: none;
   }
 `
-
 const AboutPage = ({ data }) => (
   <>
+{/* <PageInfo></PageInfo> */}
     <ContentWrapper>
       <h1>O nas!</h1>
-      <p>Witajcie Lodożercy! <br></br>
-Już niebawem w naszym mieście
-Gdzie jednorożec stoi na straży
-A ludziom się wyjść z domu marzy
-Pragniemy powiadomić o pewnej nowinie
-Która Was wszystkich zaskoczy mile
-Otóż otworzy się lokal, nieduży
-Lecz bardzo przytulny
-Gdzie lody będziemy serwować
-A uśmiech na Waszych twarzach malować
-Zakręcimy dla Was rolki lodowe 
-Co ze świeżych owoców są robione
-Uwierzcie nam na słowo będzie pysznie i kolorowo
-Wiec Kochani serdecznie Was zapraszamy
-A datę otwarcia niedługo podamy
-Pozdrawiamy,
-- Pan Rolka</p>
+      <p>
+      Witajcie Lodożercy!
+Już niebawem w naszym mieście Gdzie jednorożec stoi na straży A ludziom się wyjść z domu marzy Pragniemy powiadomić o pewnej nowinie Która Was wszystkich zaskoczy mile Otóż otworzy się lokal, nieduży Lecz bardzo przytulny Gdzie lody będziemy serwować A uśmiech na Waszych twarzach malować Zakręcimy dla Was rolki lodowe Co ze świeżych owoców są robione Uwierzcie nam na słowo będzie pysznie i kolorowo Wiec Kochani serdecznie Was zapraszamy A datę otwarcia niedługo podamy Pozdrawiamy, - Pan Rolka
+      </p>
+      <Button>
+        <Link to="/about">Dowiedz się więcej!</Link>
+      </Button>
     </ContentWrapper>
     <ImageWrapper fluid={data.file.childImageSharp.fluid} />
   </>
 )
-
 export const query = graphql`
   {
     file(name: { eq: "about-img" }) {
