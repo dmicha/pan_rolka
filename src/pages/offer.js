@@ -12,7 +12,7 @@ const pageData = {
 const OfferPage = () => (
   <>
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
-    <Button> <Link to="/contact">Napisz do nas!</Link></Button>
+    <Button > <Link  to="/contact">Napisz do nas!</Link></Button>
   </>
 )
 

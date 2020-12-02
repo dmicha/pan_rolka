@@ -7,14 +7,14 @@ import PageInfo from "../components/PageInfo/PageInfo"
 
 const ContentWrapper = styled.div`
   width: 60%;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 500px);
   text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   @media only screen and (max-width: 800px) {
-    height: 50vh;
+    height: 70vh;
     width: 100%;
   }
   @media only screen and (max-height: 450px) {
