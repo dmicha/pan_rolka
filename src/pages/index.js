@@ -7,14 +7,14 @@ import PageInfo from "../components/PageInfo/PageInfo"
 
 const ContentWrapper = styled.div`
   width: 60%;
-  height: calc(100vh - 500px);
+  height: calc(100vh - 300px);
   text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   @media only screen and (max-width: 800px) {
-    height: 70vh;
+    height: 180vh;
     width: 100%;
   }
   @media only screen and (max-height: 450px) {
@@ -24,7 +24,7 @@ const ContentWrapper = styled.div`
   h1 {
     font-size: 105px;
     margin: 0;
-    width: 60%;
+    width: 68%;
     line-height: 1;
     @media only screen and (max-width: 800px) {
       font-size: 50px;
@@ -34,7 +34,7 @@ const ContentWrapper = styled.div`
   }
 
   p {
-    margin: 60px 0 40px;
+    margin: 10px 0 40px;
     width: 40%;
     @media only screen and (max-width: 800px) {
       font-size: 25px;
@@ -62,7 +62,7 @@ const pageData = {
 }
 const IndexPage = ({ data }) => (
   <>
-    <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
+    {/* <PageInfo title={pageData.title} paragraph={pageData.paragraph} /> */}
     <ContentWrapper>
       <h1>Zrolujemy Ci lody!</h1>
       <p>
