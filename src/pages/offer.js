@@ -47,7 +47,7 @@ const ContentWrapper = styled.div`
     }
   }
 `
-const OfferPage = () => (
+const OfferPage = (data) => (
   <>
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
     <Button > <Link  to="/contact">Napisz do nas!</Link></Button>
