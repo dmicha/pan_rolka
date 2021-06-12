@@ -50,12 +50,7 @@ const ContentWrapper = styled.div`
 const OfferPage = (data) => (
   <>
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
-<<<<<<< HEAD
-    <Button > <Link  to="/contact">Napisz do nas!</Link></Button>
-    <ImageWrapper fluid={data.file.childImageSharp.fluid} />
-=======
     <Button> <Link to="/contact">Napisz do nas!</Link></Button>
->>>>>>> parent of 35b829e (rwd improved v2.7)
   </>
 )
 export const query = graphql`
