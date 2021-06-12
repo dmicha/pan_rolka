@@ -8,12 +8,14 @@ const FooterWrapper = styled.footer`
   left: 0;
   high:auto;
   bottom: 0;
-  width: 100%;
+  width: 30%;
+  flex-wrap: wrap;
   padding-top: 10px;
   color: #b4b4b4;
   text-align: left;
   @media only screen and (max-width: 800px) {
     flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
   }
   a {

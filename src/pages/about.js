@@ -54,7 +54,7 @@ object-fit: cover;
   object-fit: none;
   height: 500px;
   width: 100%;
-  top: 630px;
+  top: 1100px;
 
 
 }

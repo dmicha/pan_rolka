@@ -59,9 +59,7 @@ const ImageWrapper = styled(Image)`
     object-fit: none;
     height: 500px;
     width: 100%;
-    top: 630px;
-
-
+    top: 95%;
   }
 `
 

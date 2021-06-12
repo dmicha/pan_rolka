@@ -14,7 +14,7 @@ const Squer = styled.div`
   background: #f9f9f9;
   width: 300px;
   height: 280px;
-  margin: 10px;
+  margin: auto;
 
 `
 const GalleryPosts = () => {
