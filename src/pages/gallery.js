@@ -1,6 +1,6 @@
 import React from "react"
-import Instagram from "../components/instagram"
 import PageInfo from "../components/PageInfo/PageInfo"
+import GalleryPosts from "../components/GalleryPosts/GalleryPosts"
 
 
 const pageData = {
@@ -11,7 +11,8 @@ const pageData = {
 const GalleryPage = () => (
   <>
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
-    <Instagram></Instagram>
+    <GalleryPosts>1
+    </GalleryPosts>
   </>
 )
 
