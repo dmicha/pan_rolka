@@ -3,6 +3,8 @@ import { graphql,} from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
 
+
+
 const ContentWrapper = styled.div`
   width: 60%;
   height: calc(100vh - 300px);
@@ -11,17 +13,35 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  @media only screen and (max-width: 800px) {
+    height: 100vh;
+    width: 100%;
+  }
+  @media only screen and (max-height: 450px) {
+    margin-top: 50px;
+  }
 
   h1 {
     font-size: 105px;
     margin: 0;
-    width: 60%;
+    padding: 1px:
     line-height: 1;
+    @media only screen and (max-width: 800px) {
+      font-size: 50px;
+      text-align: right;
+      width: 100%;
+    }
   }
 
   p {
-    margin: 60px 0 40px;
-    width: 50%;
+    margin: 10px 0 40px;
+    width: 40%;
+    @media only screen and (max-width: 800px) {
+      font-size: 25px;
+      text-align: right;
+      width: 100%;
+      margin-right: 0px;
+    }
   }
 `
 
@@ -29,9 +49,18 @@ const ImageWrapper = styled(Image)`
   position: absolute !important;
   top: 0;
   right: 0;
+  
   width: 40%;
-  height: 100vh;
+  height: 100%;
+  z-index:999;
   object-fit: cover;
+  @media only screen and (max-width: 800px) {
+    position: relative;
+    object-fit: none;
+    height: 500px;
+    width: 100%;
+    top: 95%;
+  }
 `
 
 const Thanks = ({ data }) => (
