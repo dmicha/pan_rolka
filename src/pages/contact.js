@@ -1,6 +1,7 @@
 import React from "react"
 import PageInfo from "../components/PageInfo/PageInfo"
 import ContactForm from "../components/ContactForm/ContactForm"
+import Footer from "../components/Footer/Footer"
 
 const pageData = {
   title: "Kontakt",
@@ -12,6 +13,7 @@ const ContactPage = () => (
     <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
 
     <ContactForm />
+    <Footer />
   </>
 )
 

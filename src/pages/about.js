@@ -43,15 +43,21 @@ const ContentWrapper = styled.div`
 `
 
 const ImageWrapper = styled(Image)`
-  position: absolute !important;
-  top: 0;
-  right: 0;
-  width: 40%;
-  height: 100vh;
-  object-fit: cover;
-  @media only screen and (max-width: 800px) {
-    display: none;
-  }
+position: absolute !important;
+top: 0;
+right: 0;
+width: 40%;
+height: 100vh;
+object-fit: cover;
+@media only screen and (max-width: 800px) {
+  position: relative;
+  object-fit: none;
+  height: 500px;
+  width: 100%;
+  top: 630px;
+
+
+}
 `
 const AboutPage = ({ data }) => (
   <>

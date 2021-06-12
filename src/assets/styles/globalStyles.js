@@ -12,11 +12,12 @@ html{
 
 body{
     margin-top:120px;
-    max-height: 100vh;
+    bottom: 120px
     flex-direction: column;
+    flex-wrap: wrap;
     padding:80px 85px 0;
     font-family:'Lato';
-    @media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px){
     padding:10px 10px 0;
   }
 }
