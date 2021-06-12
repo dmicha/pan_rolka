@@ -53,15 +53,4 @@ const OfferPage = (data) => (
     <Button> <Link to="/contact">Napisz do nas!</Link></Button>
   </>
 )
-export const query = graphql`
-  {
-    file(name: { eq: "main" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000, maxHeight: 1800, quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-  }
-`
 export default OfferPage
