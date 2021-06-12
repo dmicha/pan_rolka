@@ -16,7 +16,7 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     padding:80px 85px 0;
-    font-family:'Lato';
+    font-family:'Montserrat';
 @media only screen and (max-width: 800px){
     padding:10px 10px 0;
   }

@@ -10,6 +10,7 @@ const NavigationWrapper = styled.nav`
   left: 30px;
   justify-content: flex-start;
   font-family: "Montserrat";
+  font weight: light;
   @media only screen and (max-width: 800px) {
     flex-wrap: wrap;
     justify-content: center;
@@ -25,14 +26,24 @@ const NavigationList = styled.ul`
   list-style: none;
   display: flex;
   padding-top: 30px;
+
   @media only screen and (max-width: 800px) {
     top: 10px;
   }
 `
 const NavigationListItem = styled.li`
+  Height: 30px;
   font-weight: 600;
   font-size: 15px;
   margin-left: 32px;
+  border: 1 solid black;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+&:hover {
+  color: #FF6805;
+  opacity: 1}
   @media only screen and (max-width: 800px) {
     margin-left: 10px;
   }

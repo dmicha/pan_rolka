@@ -25,7 +25,7 @@ const ContentWrapper = styled.div`
   h1 {
     font-size: 105px;
     margin: 0;
-    width: 68%;
+    padding: 1px:
     line-height: 1;
     @media only screen and (max-width: 800px) {
       font-size: 50px;
@@ -50,10 +50,11 @@ const ImageWrapper = styled(Image)`
   position: absolute !important;
   top: 0;
   right: 0;
+  
   width: 40%;
   height: 100%;
   z-index:999;
-  object-fit: none;
+  object-fit: cover;
   @media only screen and (max-width: 800px) {
     position: relative;
     object-fit: none;
