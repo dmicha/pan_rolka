@@ -15,7 +15,7 @@ body{
     max-height: 100vh;
     flex-direction: column;
     padding:80px 85px 0;
-    font-family:'Montserrat';
+    font-family:'Lato';
     @media only screen and (max-width: 800px){
     padding:10px 10px 0;
   }
@@ -24,7 +24,7 @@ body{
 button {
     padding:0;
     cursor:pointer;
-    font-family:'Montserrat';
+    font-family:'Lato';
     }
     ul{
         padding:0;

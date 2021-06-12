@@ -14,7 +14,11 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: flex-end;
   @media only screen and (max-width: 800px) {
+<<<<<<< HEAD
     height: 180vh;
+=======
+    height: 50vh;
+>>>>>>> parent of 35b829e (rwd improved v2.7)
     width: 100%;
   }
   @media only screen and (max-height: 450px) {

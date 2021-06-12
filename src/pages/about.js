@@ -14,13 +14,10 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: flex-end;
   @media only screen and (max-width: 800px) {
-    height: 180vh;
+    height: 100vh;
     width: 100%;
+    margin-top: 250px;
   }
-  @media only screen and (max-height: 450px) {
-    margin-top: 50px;
-  }
-
   h1 {
     font-size: 105px;
     margin: 0;
@@ -34,7 +31,7 @@ const ContentWrapper = styled.div`
   }
 
   p {
-    margin: 10px 0 40px;
+    margin: 60px 0 40px;
     width: 40%;
     @media only screen and (max-width: 800px) {
       font-size: 25px;
