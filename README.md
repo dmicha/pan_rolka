@@ -3,6 +3,11 @@
 ## Opis projektu
 Pan Rolka to aplikacja internetowa stworzona przy użyciu frameworka Gatsby. Stosuje nowoczesne technologie takie jak React i GraphQL.
 
+## Screenshots
+![image](https://github.com/user-attachments/assets/a0287288-228f-49ba-a437-f382de013d3a)
+![image](https://github.com/user-attachments/assets/21500b82-1912-46f7-ae95-ce7dc78a29b4)
+
+
 ## Funkcjonalności
 - **Szybkie generowanie stron:** Wykorzystuje Gatsby do tworzenia wydajnych stron statycznych.
 - **Integracja z GraphQL:** Efektywne zarządzanie danymi.
